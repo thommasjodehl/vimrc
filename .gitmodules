@@ -1,3 +1,6 @@
 [submodule "vimfiles/bundle/ack.vim"]
 	path = vimfiles/bundle/ack.vim
 	url = http://github.com/mileszs/ack.vim
+[submodule "vimfiles/bundle/ctrlp.vim"]
+	path = vimfiles/bundle/ctrlp.vim
+	url = http://github.com/ctrlpvim/ctrlp.vim
