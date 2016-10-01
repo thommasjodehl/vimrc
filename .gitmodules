@@ -7,3 +7,6 @@
 [submodule "vimfiles/bundle/vim-airline"]
 	path = vimfiles/bundle/vim-airline
 	url = http://github.com/vim-airline/vim-airline
+[submodule "vimfiles/bundle/Vundle.vim"]
+	path = vimfiles/bundle/Vundle.vim
+	url = http://github.com/VundleVim/Vundle.vim
