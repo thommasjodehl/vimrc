@@ -43,7 +43,7 @@ syntax on
 colo herald
 
 " Font settings
-set guifont=Consolas:h11:b
+set guifont=Consolas:h10:b
 
 " Relative line numbers
 set relativenumber
@@ -79,6 +79,7 @@ filetype indent off
 " In file search settings, if uppercase letters is used,
 " the search is case sensitive.
 set smartcase
+set ignorecase " this is needed if smartcase is supposed to work
 
 " Airline plugin settings
 set laststatus=2
