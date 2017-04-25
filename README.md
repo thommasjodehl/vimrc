@@ -30,3 +30,6 @@ The repo was created with help from the following guides:
 http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 
 http://www.howtogeek.com/howto/16226/complete-guide-to-symbolic-links-symlinks-on-windows-or-linux/
+
+# List of included bundles (wip)
+http://townk.github.io/vim-autoclose/
