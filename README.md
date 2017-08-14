@@ -10,6 +10,8 @@ Prefix:
 
 /J - creates a hard link to a directory or folder
 
+EXAMPLE: mklink /H C:\<url to cloned repo\_vimrc C:\Users\<username>\_vimrc
+
 # Installing Vim enviroment on new machine
 First clone this repo to the machine. Then create symlinks. After that go to the root of the cloned repo and issue the following commands:
 
