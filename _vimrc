@@ -38,18 +38,19 @@ filetype plugin indent on    " required
 scriptencoding utf-8
 set encoding=utf-8
 
-" Colorscheme settings
-syntax on
-colo herald
-
 " Font settings
-set guifont=Consolas:h10:b
+"set guifont=Consolas:h10:b
+set guifont=Consolas:h10
 
 " Relative line numbers
 set relativenumber
 set number
 
+" No line wrapping
+set nowrap
+
 " Netrw settings
+" Remeber that the key c changes pwd to where the cursor is
 set nocp
 filetype plugin on
 let g:netrw_liststyle=3
@@ -63,6 +64,22 @@ nmap <silent> <A-Right> :wincmd l<CR>
 " Window size maximized
 if has("gui_running")
    set lines=999 columns=999
+   " Remove certain gui elements
+   set guioptions-=m "Remove menu bar
+   set guioptions-=T "Remove toolbar
+ 
+   " Colorscheme settings
+   syntax on
+   " colo herald
+   colo molokai
+
+endif
+if !has("gui_running")
+   set term=xterm
+   set t_Co=256
+   let &t_AB="\e[48;5;%dm"
+   let &t_AF="\e[38;5;%dm"
+   colorscheme herald
 endif
 
 " CtrlP settings
@@ -70,8 +87,9 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_working_path_mode = 0
 
 " Tab settings
-:set tabstop=3
 :set expandtab
+:set shiftwidth=3
+:set softtabstop=3
 
 " Disable auto indent
 filetype indent off
@@ -88,21 +106,19 @@ set laststatus=2
 set listchars=tab:»\ ,eol:¬
 set list!
 
-" Remove certain gui elements
-set guioptions-=m "Remove menu bar
-set guioptions-=T "Remove toolbar
-
 " Leader assignment
 let mapleader = "\<Space>"
 
 " Ack.vim settings
 nnoremap <Leader>a :Ack! 
+let g:ackprg = 'ag --nogroup --nocolor --column --ignore tags'
+" let g:ackprg = 'ag --vimgrep'
 
 " Netrw leader assignment
-nnoremap <Leader>l :Lexplore<CR>
+nnoremap <Leader>l :Ntree<CR>
 
-" Change default dir to C:\wd
-:cd c:\wd\
+" Change default dir to
+:cd c:\users\twj\wd\
 
 " Highlight searchresults
 set hlsearch
