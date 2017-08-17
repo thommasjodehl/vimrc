@@ -19,6 +19,9 @@ git submodule init
 
 git submodule update
 
+# External tools for VIM
+Even though Ack is included in the plugins, the used code searching tool is actually "The Silver Searcher" or Ag. This can be downloaded using Chocolatey on Windows.
+
 # Upgrading a plugin bundle
 Let us say that the ctrlp bundle needs to be updated:
 
