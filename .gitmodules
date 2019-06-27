@@ -16,3 +16,6 @@
 [submodule "vimfiles/bundle/vim-search-pulse"]
 	path = vimfiles/bundle/vim-search-pulse
 	url = https://github.com/inside/vim-search-pulse
+[submodule "vimfiles/bundle/vim-grepper"]
+	path = vimfiles/bundle/vim-grepper
+	url = https://github.com/mhinz/vim-grepper
