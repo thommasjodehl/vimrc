@@ -19,6 +19,18 @@ Plugin 'vim-airline/vim-airline'
 " Ack plugin
 Plugin 'mileszs/ack.vim'
 
+" vim-search_pulse plugin
+Plugin 'inside/vim-search-pulse'
+
+" vim-grepper
+Plugin 'mhinz/vim-grepper'
+
+" vim-qf
+Plugin 'romainl/vim-qf'
+
+" Tender theme
+Plugin 'jacoborus/tender.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -37,10 +49,6 @@ filetype plugin indent on    " required
 " Support of special characters
 scriptencoding utf-8
 set encoding=utf-8
-
-" Font settings
-"set guifont=Consolas:h10:b
-set guifont=Consolas:h10
 
 " Relative line numbers
 set relativenumber
@@ -69,17 +77,35 @@ if has("gui_running")
    set guioptions-=T "Remove toolbar
  
    " Colorscheme settings
-   syntax on
+   " syntax on
    " colo herald
-   colo molokai
+   " colo molokai
+   "  colo vim-material
 
+   " Invisible characters and toggle of them
+   set listchars=tab:»\ ,eol:¬
+   set list!
+   set guifont=Source_Code_Pro_Semibold:h9:cANSI:qDRAFT
 endif
 if !has("gui_running")
-   set term=xterm
-   set t_Co=256
-   let &t_AB="\e[48;5;%dm"
-   let &t_AF="\e[38;5;%dm"
-   colorscheme herald
+   "set termguicolors
+   syntax enable
+   "colorscheme tender
+   "colo herald
+   let g:ctrlp_prompt_mappings = {
+      \ 'PrtBS()': ['<Char-0x07F>', '<c-h>']
+   \ }
+   inoremap <Char-0x07F> <BS>
+   nnoremap <Char-0x07F> <BS>
+
+   " Invisible characters and toggle of them
+   set listchars=tab:»\ ,eol:¬
+   set list!
+endif
+
+if &diff
+   map ] ]c
+   map [ [c
 endif
 
 " CtrlP settings
@@ -102,23 +128,28 @@ set ignorecase " this is needed if smartcase is supposed to work
 " Airline plugin settings
 set laststatus=2
 
-" Invisible characters and toggle of them
-set listchars=tab:»\ ,eol:¬
-set list!
-
 " Leader assignment
 let mapleader = "\<Space>"
 
 " Ack.vim settings
 nnoremap <Leader>a :Ack! 
-let g:ackprg = 'ag --nogroup --nocolor --column --ignore tags'
+let g:ackprg = 'ag --nogroup --nocolor --column --ignore tags --ignore *.xml --ignore *.txt --ignore *.log'
 " let g:ackprg = 'ag --vimgrep'
+
+" vim-grepper settings
+nnoremap <Leader>g :Grepper -tool ag<cr>
+nmap gs <plug>(GrepperOperator)
+xmap gs <plug>(GrepperOperator)
 
 " Netrw leader assignment
 nnoremap <Leader>l :Ntree<CR>
 
-" Change default dir to
-:cd c:\users\twj\wd\
+" Stop that annoying error sound
+set noeb vb t_vb=
 
 " Highlight searchresults
 set hlsearch
+
+" vim-qf settings
+"" Allows search results in the quickfix window to be opened in a new tab by t
+let g:qf_mapping_ack_style = 1
