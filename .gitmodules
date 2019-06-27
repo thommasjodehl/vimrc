@@ -13,3 +13,6 @@
 [submodule "vimfiles/bundle/tender.vim"]
 	path = vimfiles/bundle/tender.vim
 	url = https://github.com/jacoborus/tender.vim
+[submodule "vimfiles/bundle/vim-search-pulse"]
+	path = vimfiles/bundle/vim-search-pulse
+	url = https://github.com/inside/vim-search-pulse
