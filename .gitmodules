@@ -1,24 +1,32 @@
 [submodule "vimfiles/bundle/ack.vim"]
 	path = vimfiles/bundle/ack.vim
 	url = http://github.com/mileszs/ack.vim
+	ignore = dirty
 [submodule "vimfiles/bundle/ctrlp.vim"]
 	path = vimfiles/bundle/ctrlp.vim
 	url = http://github.com/ctrlpvim/ctrlp.vim
+	ignore = dirty
 [submodule "vimfiles/bundle/vim-airline"]
 	path = vimfiles/bundle/vim-airline
 	url = http://github.com/vim-airline/vim-airline
+	ignore = dirty
 [submodule "vimfiles/bundle/Vundle.vim"]
 	path = vimfiles/bundle/Vundle.vim
 	url = http://github.com/VundleVim/Vundle.vim
+	ignore = dirty
 [submodule "vimfiles/bundle/tender.vim"]
 	path = vimfiles/bundle/tender.vim
 	url = https://github.com/jacoborus/tender.vim
+	ignore = dirty
 [submodule "vimfiles/bundle/vim-search-pulse"]
 	path = vimfiles/bundle/vim-search-pulse
 	url = https://github.com/inside/vim-search-pulse
+	ignore = dirty
 [submodule "vimfiles/bundle/vim-grepper"]
 	path = vimfiles/bundle/vim-grepper
 	url = https://github.com/mhinz/vim-grepper
+	ignore = dirty
 [submodule "vimfiles/bundle/vim-qf"]
 	path = vimfiles/bundle/vim-qf
 	url = https://github.com/romainl/vim-qf
+	ignore = dirty
