@@ -10,6 +10,3 @@
 [submodule "vimfiles/bundle/Vundle.vim"]
 	path = vimfiles/bundle/Vundle.vim
 	url = http://github.com/VundleVim/Vundle.vim
-[submodule "vimfiles/bundle/tender.vim"]
-	path = vimfiles/bundle/tender.vim
-	url = https://github.com/jacoborus/tender.vim
