@@ -1,3 +1,5 @@
+language en " sets the language of the messages / ui (only works for Vim and not gVim. See langmenu setting for gVim)
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -27,9 +29,6 @@ Plugin 'mhinz/vim-grepper'
 
 " vim-qf
 Plugin 'romainl/vim-qf'
-
-" Tender theme
-Plugin 'jacoborus/tender.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -88,13 +87,7 @@ if has("gui_running")
    set guifont=Source_Code_Pro_Semibold:h9:cANSI:qDRAFT
 endif
 if !has("gui_running")
-   "set termguicolors
    syntax enable
-   "colorscheme tender
-   "colo herald
-   let g:ctrlp_prompt_mappings = {
-      \ 'PrtBS()': ['<Char-0x07F>', '<c-h>']
-   \ }
    inoremap <Char-0x07F> <BS>
    nnoremap <Char-0x07F> <BS>
 
@@ -113,9 +106,12 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_working_path_mode = 0
 
 " Tab settings
-:set expandtab
-:set shiftwidth=3
-:set softtabstop=3
+set expandtab
+set shiftwidth=3
+set softtabstop=3
+
+" Vim enforces different tab settings for ruby files by default. This turns that setting off..
+let g:ruby_recommended_style = 0
 
 " Disable auto indent
 filetype indent off
