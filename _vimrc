@@ -30,6 +30,9 @@ Plugin 'mhinz/vim-grepper'
 " vim-qf
 Plugin 'romainl/vim-qf'
 
+" Gutentags
+Plugin 'ludovicchabant/vim-gutentags'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -114,7 +117,7 @@ set softtabstop=3
 let g:ruby_recommended_style = 0
 
 " Disable auto indent
-filetype indent off
+filetype indent on
 
 " In file search settings, if uppercase letters is used,
 " the search is case sensitive.
@@ -149,3 +152,10 @@ set hlsearch
 " vim-qf settings
 "" Allows search results in the quickfix window to be opened in a new tab by t
 let g:qf_mapping_ack_style = 1
+
+" Gutentags settings
+set statusline+=%{gutentags#statusline()}
+"" Specifies that the root of the project is where a .gutctags file is found.
+"" Make sure to put this at the root of every project!
+let g:gutentags_project_root = ['.gutctags']
+let g:gutentags_add_default_project_roots = 0
